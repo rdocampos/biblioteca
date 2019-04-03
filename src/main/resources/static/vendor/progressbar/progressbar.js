@@ -150,10 +150,10 @@ var Tweenable = (function () {
   }
 
   /**
-   * Applies a filter to Tweenable instance.
-   * @param {Tweenable} tweenable The `Tweenable` instance to call the filter
+   * Applies a interceptor to Tweenable instance.
+   * @param {Tweenable} tweenable The `Tweenable` instance to call the interceptor
    * upon.
-   * @param {String} filterName The name of the filter to apply.
+   * @param {String} filterName The name of the interceptor to apply.
    * @private
    */
   function applyFilter (tweenable, filterName) {
@@ -1370,7 +1370,7 @@ var Tweenable = (function () {
   }
 
   /**
-   * Runs a filter operation on all chunks of a string that match a RegExp
+   * Runs a interceptor operation on all chunks of a string that match a RegExp
    *
    * @param {RegExp} pattern
    * @param {string} unfilteredString

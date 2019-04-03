@@ -14,6 +14,6 @@ public class BibliotecaController {
 
         String mainContent = "/main-content/index";
         model.addAttribute("mainContent", mainContent);
-        return "/pattern/model-page.html";
+        return "/pattern/model-page";
     }
 }
