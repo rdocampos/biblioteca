@@ -11,9 +11,6 @@ public class BibliotecaController {
     @RequestMapping("/")
     public String visualizarIndex(Model model) {
 
-
-        String mainContent = "/main-content/index";
-        model.addAttribute("mainContent", mainContent);
-        return "/pattern/model-page";
+        return "/content/index";
     }
 }

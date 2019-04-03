@@ -26,4 +26,12 @@ public class LoginService {
         senha = hexString.toString();
         return senha;
     }
+
+    public Boolean validaConfirmaSenha(String senha, String confirmaSenha){
+        if (senha.equals(confirmaSenha) && !senha.equals("")){
+            return true;
+        }else {
+            return false;
+        }
+    }
 }

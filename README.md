@@ -1,6 +1,6 @@
 ﻿# Controle de Biblioteca
 
-Projeto para o controle de uma biblioteca de um escritório de advocacia.
+Sistema para o Gerenciamento de uma Biblioteca de uma empresa / escritório.
 
 Desenvolvido com:
 <ul>
