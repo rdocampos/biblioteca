@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="pattern/head"></head>
+
+<body class="animsition">
+	<div class="page-wrapper">
+		<!-- HEADER MOBILE-->
+		<header th:replace="pattern/header-mobile"></header>
+		<!-- END HEADER MOBILE-->
+
+		<!-- MENU SIDEBAR-->
+		<aside th:replace="pattern/menu-sidebar"></aside>
+		<!-- END MENU SIDEBAR-->
+
+		<!-- PAGE CONTAINER-->
+		<div class="page-container">
+			<!-- HEADER DESKTOP-->
+			<header th:replace="pattern/header-desktop"></header>
+			<!-- HEADER DESKTOP-->
+
+
+
+			<!-- MAIN CONTENT-->
+
+
+			<div class="main-content container" id="cadastro-livro">
+				<div class="au-card recent-report">
+					<div class="au-card-inner">
+						<div class="container text-center">
+							<div class="login-logo">
+								<h1>Cadastro de Livro</h1>
+							</div>
+						</div>
+						<div class="container">
+
+							<form class="form-ajax" action="/efetuar-cadastro-livro" data-target="cadastro-livro">
+								<div class="row">
+									<div class="col-md-6 mb-3">
+										<label for="titulo">Título</label> <input type="text"
+											class="form-control" id="titulo" name="titulo"
+											placeholder="Título..">
+
+									</div>
+									<div class="col-md-6 mb-3">
+										<label for="sobrenome">Autor</label> <input type="text"
+											class="form-control" id="autor" name="autor" placeholder="Autor..">
+
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 mb-3">
+										<label for="editora">Editora</label> <input type="text"
+											class="form-control" id="editora" name="editora"
+											placeholder="Editora">
+
+									</div>
+									<div class="col-md-6 mb-3">
+										<label for="area">Area</label> <input type="text"
+											class="form-control" id="area" name="area" placeholder="Area..">
+
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 mb-3">
+										<label for="data-aquisicao">Data aquisição</label> <input
+											type="date" class="form-control" id="data-aquisicao"
+											name="dataAquisicao">
+									</div>
+									<div class="col-md-6 mb-3">
+										<label for="area">Preço</label> <input type="text"
+											class="form-control money" id="preco" name="preco" placeholder="0,00">
+
+									</div>
+								</div>
+								<div class="text-center">
+									<button type="submit" class="btn btn-success">Cadastrar</button>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- END MAIN CONTENT-->
+			<!-- END PAGE CONTAINER-->
+
+
+		</div>
+	</div>
+	<div th:replace="pattern/scripts"></div>
+</body>
+
+</html>
+<!-- end document-->
