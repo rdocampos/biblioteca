@@ -29,7 +29,7 @@ public class UsuarioController {
 
     @RequestMapping(value = "/validar-login", method = RequestMethod.POST)
     public String efetuarLogin(HttpSession session, @RequestParam(value = "email") String email, @RequestParam(value = "senha") String senha) {
-        Usuario usuario = usuarioRepository.getByEmail(email);
+        Usuario usuario = usuarioRepository.getByEmail(email.toLowerCase());
         if (usuario.getSenha().equals(loginService.gerarHash(senha))) {
             session.setAttribute("usuarioLogado", usuario.getIdUsuario());
             return "redirect:/";

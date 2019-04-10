@@ -16,7 +16,7 @@ public class BibliotecaInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
         String uri = request.getRequestURI();
-        if ((uri.equals("/login") || uri.equals("/validar-login")) && request.getSession().getAttribute("usuarioLogado") == null) {
+        if (uri.equals("/login") || uri.equals("/validar-login") || uri.contains("assets")) {
             return true;
         }
         if (request.getSession().getAttribute("usuarioLogado") != null) {

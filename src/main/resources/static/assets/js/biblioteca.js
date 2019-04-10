@@ -19,6 +19,7 @@ function ajaxForm(form) {
         }
     });
 }
+
 $(document).ready(function(){
     var SPMaskBehavior = function (val) {
             return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
@@ -31,4 +32,5 @@ $(document).ready(function(){
 
     $('.cpf').mask('000.000.000-00', {reverse: true});
     $('.mask-phone').mask(SPMaskBehavior, spOptions);
+    $('.money').mask("#.##0,00", {reverse: true});
 });

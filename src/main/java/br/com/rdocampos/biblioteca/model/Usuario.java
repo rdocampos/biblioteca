@@ -37,7 +37,7 @@ public class Usuario {
     public Usuario(String nome, String cpf, String email, String telefone, TipoUsuario tipoUsuario) {
         this.nome = nome;
         this.cpf = cpf.replaceAll("[^0-9]*","");
-        this.email = email;
+        this.email = email.toLowerCase();
         this.telefone = telefone;
         this.tipoUsuario = tipoUsuario;
         this.dataCadastro = LocalDateTime.now();
@@ -46,7 +46,7 @@ public class Usuario {
     public Usuario(String nome, String cpf, String email, String telefone, TipoUsuario tipoUsuario, String senha) {
         this.nome = nome;
         this.cpf = cpf.replaceAll("[^0-9]*","");
-        this.email = email;
+        this.email = email.toLowerCase();
         this.telefone = telefone;
         this.tipoUsuario = tipoUsuario;
         this.senha = senha;
@@ -83,7 +83,7 @@ public class Usuario {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email = email.toLowerCase();
     }
 
     public String getTelefone() {
